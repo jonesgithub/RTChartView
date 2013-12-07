@@ -44,7 +44,7 @@
                            ];
     
     self.chartView = [[RTChartView alloc] initWithFrame:CGRectMake(0, 0, 520, 200)];
-    self.chartView.xMargin = 40.0f;
+    self.chartView.xMargin = 10.0f;
     self.chartView.yMargin = 10.0f;
     self.chartView.backgroundColor = [UIColor clearColor];
     [self.chartView configWithData:dataArray];
