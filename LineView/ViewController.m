@@ -21,7 +21,8 @@
 {
     [super viewDidLoad];
     
-    self.priceChartView = [[AJKPriceChartView alloc] initWithFrame:CGRectMake(0, 0, 320, 200)];
+    self.priceChartView = [[AJKPriceChartView alloc] initWithFrame:CGRectMake(0, 20, 320, 200)];
+    self.priceChartView.backgroundColor = [UIColor yellowColor];
     [self.priceChartView configWithData:nil];
     [self.view addSubview:self.priceChartView];
 }

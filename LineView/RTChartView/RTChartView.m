@@ -129,7 +129,7 @@
     for (NSDictionary *info in self.dataArray) {
         CGFloat price = [info[@"price"] floatValue];
         CGFloat xOffset = self.xMargin+counter*self.xGap;
-        CGFloat yOffset = (self.maxPrice - price)/(self.maxPrice - self.minPrice)*(self.frame.size.height - self.yMargin)+10.0f;
+        CGFloat yOffset = (self.maxPrice - price)/(self.maxPrice - self.minPrice)*(self.frame.size.height - self.labelSize.height - self.yMargin*2)+self.yMargin;
         if (counter == 0) {
             CGContextMoveToPoint(context, xOffset, yOffset);
         } else {
