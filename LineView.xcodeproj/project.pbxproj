@@ -21,6 +21,8 @@
 		4A49934C1852B3DD00103F85 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A49932E1852B3DD00103F85 /* UIKit.framework */; };
 		4A4993541852B3DD00103F85 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4A4993521852B3DD00103F85 /* InfoPlist.strings */; };
 		4A4993561852B3DD00103F85 /* LineViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4993551852B3DD00103F85 /* LineViewTests.m */; };
+		4A4993621852B41800103F85 /* RTChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4993611852B41800103F85 /* RTChartView.m */; };
+		4A49936518536A5200103F85 /* AJKPriceChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A49936418536A5200103F85 /* AJKPriceChartView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,10 @@
 		4A4993511852B3DD00103F85 /* LineViewTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LineViewTests-Info.plist"; sourceTree = "<group>"; };
 		4A4993531852B3DD00103F85 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4A4993551852B3DD00103F85 /* LineViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LineViewTests.m; sourceTree = "<group>"; };
+		4A4993601852B41800103F85 /* RTChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RTChartView.h; path = RTChartView/RTChartView.h; sourceTree = "<group>"; };
+		4A4993611852B41800103F85 /* RTChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RTChartView.m; path = RTChartView/RTChartView.m; sourceTree = "<group>"; };
+		4A49936318536A5200103F85 /* AJKPriceChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AJKPriceChartView.h; path = RTChartView/AJKPriceChartView.h; sourceTree = "<group>"; };
+		4A49936418536A5200103F85 /* AJKPriceChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AJKPriceChartView.m; path = RTChartView/AJKPriceChartView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +118,7 @@
 		4A4993301852B3DD00103F85 /* LineView */ = {
 			isa = PBXGroup;
 			children = (
+				4A49935F1852B3EA00103F85 /* RTChartView */,
 				4A4993391852B3DD00103F85 /* AppDelegate.h */,
 				4A49933A1852B3DD00103F85 /* AppDelegate.m */,
 				4A49933C1852B3DD00103F85 /* Main.storyboard */,
@@ -150,6 +157,17 @@
 				4A4993521852B3DD00103F85 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4A49935F1852B3EA00103F85 /* RTChartView */ = {
+			isa = PBXGroup;
+			children = (
+				4A4993601852B41800103F85 /* RTChartView.h */,
+				4A4993611852B41800103F85 /* RTChartView.m */,
+				4A49936318536A5200103F85 /* AJKPriceChartView.h */,
+				4A49936418536A5200103F85 /* AJKPriceChartView.m */,
+			);
+			name = RTChartView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,8 +268,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A4993411852B3DD00103F85 /* ViewController.m in Sources */,
+				4A49936518536A5200103F85 /* AJKPriceChartView.m in Sources */,
 				4A49933B1852B3DD00103F85 /* AppDelegate.m in Sources */,
 				4A4993371852B3DD00103F85 /* main.m in Sources */,
+				4A4993621852B41800103F85 /* RTChartView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
