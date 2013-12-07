@@ -23,6 +23,7 @@
 		4A4993561852B3DD00103F85 /* LineViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4993551852B3DD00103F85 /* LineViewTests.m */; };
 		4A4993621852B41800103F85 /* RTChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4993611852B41800103F85 /* RTChartView.m */; };
 		4A49936518536A5200103F85 /* AJKPriceChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A49936418536A5200103F85 /* AJKPriceChartView.m */; };
+		4A4993681853DD5600103F85 /* RTChartDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4993671853DD5600103F85 /* RTChartDotView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,8 @@
 		4A4993611852B41800103F85 /* RTChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RTChartView.m; path = RTChartView/RTChartView.m; sourceTree = "<group>"; };
 		4A49936318536A5200103F85 /* AJKPriceChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AJKPriceChartView.h; path = RTChartView/AJKPriceChartView.h; sourceTree = "<group>"; };
 		4A49936418536A5200103F85 /* AJKPriceChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AJKPriceChartView.m; path = RTChartView/AJKPriceChartView.m; sourceTree = "<group>"; };
+		4A4993661853DD5600103F85 /* RTChartDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RTChartDotView.h; path = RTChartView/RTChartDotView.h; sourceTree = "<group>"; };
+		4A4993671853DD5600103F85 /* RTChartDotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RTChartDotView.m; path = RTChartView/RTChartDotView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +169,8 @@
 				4A4993611852B41800103F85 /* RTChartView.m */,
 				4A49936318536A5200103F85 /* AJKPriceChartView.h */,
 				4A49936418536A5200103F85 /* AJKPriceChartView.m */,
+				4A4993661853DD5600103F85 /* RTChartDotView.h */,
+				4A4993671853DD5600103F85 /* RTChartDotView.m */,
 			);
 			name = RTChartView;
 			sourceTree = "<group>";
@@ -268,6 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A4993411852B3DD00103F85 /* ViewController.m in Sources */,
+				4A4993681853DD5600103F85 /* RTChartDotView.m in Sources */,
 				4A49936518536A5200103F85 /* AJKPriceChartView.m in Sources */,
 				4A49933B1852B3DD00103F85 /* AppDelegate.m in Sources */,
 				4A4993371852B3DD00103F85 /* main.m in Sources */,
@@ -480,6 +486,7 @@
 				4A49935B1852B3DD00103F85 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4A49935C1852B3DD00103F85 /* Build configuration list for PBXNativeTarget "LineViewTests" */ = {
 			isa = XCConfigurationList;
@@ -488,6 +495,7 @@
 				4A49935E1852B3DD00103F85 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

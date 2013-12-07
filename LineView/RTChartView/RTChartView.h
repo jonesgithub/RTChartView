@@ -14,11 +14,19 @@
 
 @property (nonatomic) CGFloat xMargin;
 @property (nonatomic) CGFloat yMargin;
+
 @property (nonatomic) CGFloat yAxisItemCount;
 @property (nonatomic) NSInteger yDataGap;
+
 @property (nonatomic) CGSize labelSize;
+
 @property (nonatomic) CGFloat lineWidth;
 @property (nonatomic) UIColor *lineColor;
+
+//these are used for config dots
+@property (nonatomic) CGFloat dotRadius;
+@property (nonatomic) CGFloat dotLineWidth;
+@property (nonatomic, strong) UIColor *dotLineColor;
 
 - (void)configWithData:(NSArray *)data;
 
