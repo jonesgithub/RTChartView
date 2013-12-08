@@ -40,9 +40,9 @@
                            @{@"time":@"1", @"price":@"40000"},
                            @{@"time":@"5", @"price":@"60000"},
                            @{@"time":@"1", @"price":@"50000"},
-                           @{@"time":@"6", @"price":@"80000"},
-                           @{@"time":@"1", @"price":@"10000"},
-                           @{@"time":@"6", @"price":@"80000"},
+                           @{@"time":@"6", @"price":@"70000"},
+                           @{@"time":@"1", @"price":@"20000"},
+                           @{@"time":@"6", @"price":@"50000"},
                            @{@"time":@"1", @"price":@"20000"},
                            @{@"time":@"6", @"price":@"70000"},
                            @{@"time":@"1", @"price":@"30000"},
@@ -60,30 +60,30 @@
     self.chartView.backgroundColor = [UIColor clearColor];
     self.chartView.delegate = self;
     [self.chartView configWithData:dataArray];
-    
+    [self addSubview:self.chartView];
     
     NSArray *secondDataArray = @[
-                           @{@"time":@"1", @"price":@"70000"},
-                           @{@"time":@"2", @"price":@"80000"},
-                           @{@"time":@"1", @"price":@"10000"},
-                           @{@"time":@"3", @"price":@"30000"},
-                           @{@"time":@"1", @"price":@"80000"},
-                           @{@"time":@"4", @"price":@"50000"},
+                           @{@"time":@"1", @"price":@"30000"},
+                           @{@"time":@"2", @"price":@"10000"},
+                           @{@"time":@"1", @"price":@"15000"},
+                           @{@"time":@"3", @"price":@"50000"},
+                           @{@"time":@"1", @"price":@"40000"},
+                           @{@"time":@"4", @"price":@"60000"},
+                           @{@"time":@"1", @"price":@"30000"},
+                           @{@"time":@"5", @"price":@"70000"},
                            @{@"time":@"1", @"price":@"20000"},
-                           @{@"time":@"5", @"price":@"40000"},
-                           @{@"time":@"1", @"price":@"80000"},
-                           @{@"time":@"6", @"price":@"60000"},
+                           @{@"time":@"6", @"price":@"80000"},
                            @{@"time":@"1", @"price":@"10000"},
                            @{@"time":@"6", @"price":@"80000"},
-                           @{@"time":@"1", @"price":@"20000"},
+                           @{@"time":@"1", @"price":@"50000"},
+                           @{@"time":@"6", @"price":@"60000"},
+                           @{@"time":@"1", @"price":@"40000"},
                            @{@"time":@"6", @"price":@"70000"},
                            @{@"time":@"1", @"price":@"30000"},
-                           @{@"time":@"6", @"price":@"50000"},
-                           @{@"time":@"1", @"price":@"60000"},
-                           @{@"time":@"6", @"price":@"40000"},
-                           @{@"time":@"1", @"price":@"15000"},
-                           @{@"time":@"7", @"price":@"10000"},
-                           @{@"time":@"1", @"price":@"30000"}
+                           @{@"time":@"6", @"price":@"80000"},
+                           @{@"time":@"1", @"price":@"25000"},
+                           @{@"time":@"7", @"price":@"80000"},
+                           @{@"time":@"1", @"price":@"10000"}
                            ];
     RTChartView *secondChartView = [[RTChartView alloc] initWithFrame:CGRectMake(0, 0, 1020, 200)];
     secondChartView.xMargin = 10.0f;
@@ -91,12 +91,9 @@
     secondChartView.backgroundColor = [UIColor clearColor];
     secondChartView.delegate = self;
     [secondChartView configWithData:secondDataArray];
-    
-    [secondChartView configWithData:secondDataArray];
+    [self addSubview:secondChartView];
     
     self.contentSize = CGSizeMake(1020, 200);
-    [self addSubview:self.chartView];
-    [self addSubview:secondChartView];
 }
 
 #pragma mark - RTChartViewEventDelegate
