@@ -205,9 +205,4 @@
         [self.delegate chartView:self dotDidClicked:dot];
     }
 }
-
-- (void)viewDidClicked:(RTChartView *)chartView
-{
-    
-}
 @end
