@@ -89,13 +89,14 @@
     //tune the time label axis and dots.
     for (UILabel *timeLabel in self.timeLabelArray) {
         [timeLabel removeFromSuperview];
-        [self.timeLabelArray removeObject:timeLabel];
     }
     
     for (RTChartDotView *dot in self.dotArray) {
         [dot removeFromSuperview];
-        [self.dotArray removeObject:dot];
     }
+    
+    [self.timeLabelArray removeAllObjects];
+    [self.dotArray removeAllObjects];
     
     NSInteger counter = 0;
     for (NSDictionary *data in self.dataArray) {
