@@ -8,15 +8,26 @@
 
 #import "AJKPriceChartView.h"
 #import "RTChartView.h"
+#import "RTVerticalDashedLine.h"
 
 @interface AJKPriceChartView ()
 
 @property (nonatomic, strong) RTChartView *chartView;
+@property (nonatomic, strong) RTVerticalDashedLine *verticalDashedLine;
 
 @end
 
 @implementation AJKPriceChartView
+#pragma mark - getters and setters
+- (RTVerticalDashedLine *)verticalDashedLine
+{
+    if (_verticalDashedLine == nil) {
+        _verticalDashedLine = [[RTVerticalDashedLine alloc] init];
+    }
+    return _verticalDashedLine;
+}
 
+#pragma mark - public method
 - (void)configWithData:(NSDictionary *)data
 {
     NSArray *dataArray = @[
@@ -43,14 +54,24 @@
                            @{@"time":@"1", @"price":@"30000"}
                            ];
     
-    self.chartView = [[RTChartView alloc] initWithFrame:CGRectMake(0, 0, 520, 200)];
+    self.chartView = [[RTChartView alloc] initWithFrame:CGRectMake(0, 0, 1020, 200)];
     self.chartView.xMargin = 10.0f;
     self.chartView.yMargin = 10.0f;
     self.chartView.backgroundColor = [UIColor clearColor];
+    self.chartView.delegate = self;
     [self.chartView configWithData:dataArray];
     
-    self.contentSize = CGSizeMake(520, 200);
+    self.contentSize = CGSizeMake(1020, 200);
     [self addSubview:self.chartView];
+}
+
+#pragma mark - RTChartViewEventDelegate
+- (void)chartView:(RTChartView *)chartView dotDidClicked:(RTChartDotView *)dot
+{
+    self.verticalDashedLine.frame = CGRectMake(dot.center.x, 0, 0.5f, chartView.frame.size.height-chartView.yMargin-chartView.labelSize.height);
+    if (![self.verticalDashedLine superview]) {
+        [chartView addSubview:self.verticalDashedLine];
+    }
 }
 
 @end

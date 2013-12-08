@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RTChartView.h"
 
-@interface AJKPriceChartView : UIScrollView
+@interface AJKPriceChartView : UIScrollView<RTChartViewEventDelegate>
 
 - (void)configWithData:(NSDictionary *)data;
 

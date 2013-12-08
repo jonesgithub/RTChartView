@@ -7,8 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RTChartDotView.h"
+
+@class RTChartView;
+
+@protocol RTChartViewEventDelegate <NSObject>
+
+@optional
+- (void)chartView:(RTChartView *)chartView dotDidClicked:(RTChartDotView *)dot;
+
+@end
 
 @interface RTChartView : UIView
+
+@property (nonatomic, weak) id<RTChartViewEventDelegate> delegate;
 
 @property (nonatomic, strong, readonly) NSArray *priceArray;
 

@@ -30,7 +30,7 @@
     }
     
     if (self.lineWidth == 0) {
-        self.lineWidth = 2.0f;
+        self.lineWidth = 3.0f;
     }
     
     if (self.lineColor == nil) {

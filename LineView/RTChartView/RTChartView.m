@@ -149,7 +149,6 @@
     
 }
 
-
 - (void)drawRect:(CGRect)rect
 {
     
@@ -178,7 +177,36 @@
     
 }
 
+#pragma mark - method overrided
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    UITouch *touch = [[touches allObjects] firstObject];
+    CGPoint location = [touch locationInView:self];
+    CGFloat xOffset = location.x;
+    
+    CGFloat minDistance = CGFLOAT_MAX;
+    RTChartDotView *closestDot = nil;
+    for (RTChartDotView *dotView in self.dotArray) {
+        CGFloat distance = fabs(dotView.frame.origin.x - xOffset);
+        if (distance < minDistance) {
+            minDistance = distance;
+            closestDot = dotView;
+        }
+    }
+    
+    [self dotDidClicked:closestDot];
+    
+}
+
+#pragma mark - event response
 - (void)dotDidClicked:(RTChartDotView *)dot
+{
+    if ([self.delegate respondsToSelector:@selector(chartView:dotDidClicked:)]) {
+        [self.delegate chartView:self dotDidClicked:dot];
+    }
+}
+
+- (void)viewDidClicked:(RTChartView *)chartView
 {
     
 }
