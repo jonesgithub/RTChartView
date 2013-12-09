@@ -15,6 +15,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         self.lineColor = [UIColor blackColor];
+        self.backgroundColor = [UIColor clearColor];
     }
     return self;
 }
