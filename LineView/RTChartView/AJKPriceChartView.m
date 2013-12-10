@@ -94,6 +94,15 @@
     [self addSubview:secondChartView];
     
     self.contentSize = CGSizeMake(1020, 200);
+    
+    UIView *removeView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height-secondChartView.labelSize.height-secondChartView.yMargin)];
+    removeView.backgroundColor = self.backgroundColor;
+    [self addSubview:removeView];
+    [UIView animateWithDuration:5.0f animations:^{
+        removeView.frame = CGRectMake(400, self.frame.origin.y, self.frame.size.width, removeView.frame.size.height);
+    } completion:^(BOOL finished) {
+        
+    }];
 }
 
 #pragma mark - RTChartViewEventDelegate
