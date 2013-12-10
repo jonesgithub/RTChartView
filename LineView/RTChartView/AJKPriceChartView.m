@@ -99,9 +99,9 @@
     removeView.backgroundColor = self.backgroundColor;
     [self addSubview:removeView];
     [UIView animateWithDuration:5.0f animations:^{
-        removeView.frame = CGRectMake(400, self.frame.origin.y, self.frame.size.width, removeView.frame.size.height);
+        removeView.frame = CGRectMake(1020, 0, 1020, self.bounds.size.height-secondChartView.labelSize.height-secondChartView.yMargin);
     } completion:^(BOOL finished) {
-        
+        [removeView removeFromSuperview];
     }];
 }
 
